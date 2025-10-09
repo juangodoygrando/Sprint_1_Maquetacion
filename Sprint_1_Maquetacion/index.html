@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link
+      rel="shortcut icon"
+      href="./img/favicon-32x32.png"
+      type="image/x-icon"
+    />
 
     <!-- Link de google font para importar la fuente "Rubik" -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,17 +26,27 @@
 
     <header>
       <nav>
-        <!-- logo de bookmark -->
-        <img src="./img/bookmark.png" alt="logo_bookmark" />
+        <!-- logo y titulo de bookmark -->
+
+        <img
+          src="./img/logo-bookmark.svg"
+          alt="logo_bookmark"
+          class="logo_bookmark"
+        />
+
+        <img
+          src="./img/icon-hamburger.svg"
+          alt="menu_hamburguesa"
+          class="hamburguer"
+        />
 
         <!-- lista de links del navbar -->
         <ul>
-          <li><a></a>FEATURES</li>
-          <li><a></a>PRICING</li>
-          <li><a></a>CONTACT</li>
+          <li><a href="#">FEATURES</a></li>
+          <li><a href="#">PRICING</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li><button class="btn_login">LOGIN</button></li>
         </ul>
-        <!-- Button para loguearse -->
-        <button type="button">LOGING</button>
       </nav>
     </header>
 

@@ -1,0 +1,59 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 85%;
+  margin: auto;
+
+  .logo_bookmark {
+    margin-left: 1.5rem;
+    height: 1.5rem;
+  }
+
+  ul {
+    display: flex;
+    margin: 2rem;
+    align-items: center;
+    li {
+      list-style: none;
+      margin-left: 1rem;
+      a {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+      }
+    }
+    .btn_login {
+      margin-left: 1.5rem;
+      border-radius: 5px;
+      background-color: rgb(227, 87, 87);
+      color: white;
+      padding: 0.4rem 1rem 0.4rem 1rem;
+    }
+    .btn_login:hover {
+      background-color: white;
+      color: rgb(227, 87, 87);
+      border: solid rgb(227, 87, 87) 3px;
+      cursor: pointer;
+    }
+  }
+
+  .hamburguer {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    margin-top: 2rem;
+    .hamburguer {
+      display: flex;
+    }
+    .logo_bookmark {
+      margin-left: 0;
+    }
+    ul {
+      display: none;
+    }
+  }
+}
