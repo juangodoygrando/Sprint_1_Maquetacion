@@ -3,7 +3,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   max-width: 85%;
-  margin: auto;
+  margin: 2rem auto;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
 
   .logo_bookmark {
     margin-left: 1.5rem;
@@ -24,7 +28,6 @@ nav {
       }
     }
     .btn_login {
-      margin-left: 1.5rem;
       border-radius: 5px;
       background-color: rgb(227, 87, 87);
       color: white;
@@ -45,7 +48,6 @@ nav {
 
 @media (max-width: 768px) {
   nav {
-    margin-top: 2rem;
     .hamburguer {
       display: flex;
     }
