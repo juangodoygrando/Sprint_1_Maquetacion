@@ -1,0 +1,83 @@
+.features_section {
+  h2,
+  p,
+  div {
+    text-align: center;
+    justify-items: center;
+    width: 50%;
+    margin: 0 auto;
+  }
+  p {
+    width: 30%;
+    color: rgb(103, 100, 100);
+    margin: 1.5rem auto 3rem;
+  }
+}
+
+.features_section_buttons {
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    width: 100%;
+    background-color: white;
+    border: none;
+    padding: 1.2rem 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+    border-bottom: solid rgb(131, 125, 125) 1.3px;
+  }
+  button:hover {
+    color: rgb(224, 77, 77);
+    cursor: pointer;
+  }
+  .simple_bookmarking_button {
+    border-bottom: solid rgb(224, 77, 77) 3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features_section {
+    margin-top: 6rem;
+    min-width: 75%;
+
+    p {
+      width: 90%;
+      font-size: small;
+      color: rgb(152, 149, 145);
+    }
+  }
+
+  .features_section_buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-top: solid rgb(131, 125, 125) 1.3px;
+    min-width: 75%;
+  }
+
+  .simple_bookmarking_button {
+    border-bottom: solid rgb(131, 125, 125) 1.3px !important;
+    z-index: 0;
+  }
+
+  .simple_bookmarking_button::after {
+    content: "  ";
+    position: absolute;
+    z-index: 1;
+    height: 6px;
+    width: 60%;
+    margin: auto;
+    background-color: rgb(224, 77, 77);
+    right: 20%;
+    top: 96%;
+  }
+  button {
+    color: rgb(79, 78, 77);
+  }
+  button:hover {
+    color: black !important;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
