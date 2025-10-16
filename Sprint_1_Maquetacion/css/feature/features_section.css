@@ -9,11 +9,11 @@
   }
   p {
     width: 30%;
-    color: rgb(103, 100, 100);
+    color: rgb(107, 114, 128);
     margin: 1.5rem auto 3rem;
   }
-  h2{
-    font-weight: 400;
+  h2 {
+    font-weight: 500;
   }
 }
 
@@ -49,6 +49,9 @@
       width: 90%;
       font-size: small;
       color: rgb(152, 149, 145);
+    }
+    h2 {
+      font-size: 1.2rem;
     }
   }
 
