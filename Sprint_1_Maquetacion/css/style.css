@@ -11,7 +11,7 @@ body {
 
 main {
   overflow-x: hidden;
-  section{
+  section {
     margin-top: 2rem;
   }
   p {
@@ -54,55 +54,160 @@ main {
 }
 .btn_login {
   border-radius: 5px;
-  background-color: rgb(227, 87, 87);
-  border: 2px solid rgb(227, 87, 87);
+  background-color: rgb(249, 89, 91);
+  border: 2px solid rgb(249, 89, 91);
   color: white;
   padding: 0.4rem 1rem;
   transition: all 0.2s ease;
 }
 .btn_login:hover {
   background-color: white;
-  color: rgb(227, 87, 87);
-  border: 2px solid rgb(227, 87, 87);
+  color: rgb(249, 89, 91);
+  border: 2px solid rgb(249, 89, 91);
   cursor: pointer;
 }
 .hamburguer_menu {
   display: none;
 }
 
+/* HERO SECTION CSS*/
 
+.hero_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
+.hero_section_text {
+  width: 70%;
+  margin: 5rem auto;
+}
+.hero_section_text h1 {
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.hero_section_text p {
+  margin-bottom: 1.5rem;
+  color: rgb(157, 163, 176);
+}
+.hero_section_img {
+  margin-left: 2rem;
+  position: relative;
+  aspect-ratio: 5 / 4;
+}
+
+.hero_section_img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  object-fit: contain;
+  z-index: 2;
+}
+.hero_section_img::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 65%;
+  background-color: rgb(82, 102, 223);
+  border-radius: 200px 0 0 200px;
+  right: -25%;
+  top: 35%;
+}
+.button_chrome {
+  background-color: rgb(82, 102, 223);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.button_chrome:hover {
+  background-color: white;
+  color: rgb(82, 102, 223);
+  border: 2px solid rgb(82, 102, 223);
+}
+
+.button_firefox {
+  background-color: white;
+  color: rgb(157, 163, 176);
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgba(73, 73, 73, 0.15);
+  border: none;
+}
+.button_firefox:hover {
+  color: rgb(57, 58, 60);
+  border: 2px solid rgb(57, 58, 60);
+}
 
 /* MEDIA QUERY */
 
 @media (max-width: 768px) {
-
   /* NAVBAR */
   .hamburguer_menu {
     display: flex;
   }
 
-  .logo_bookmark_navbar{
+  .logo_bookmark_navbar {
     margin-left: 0;
   }
-  .navbar_list{
+  .navbar_list {
     display: none;
   }
 
+  /* HERO SECTION */
 
+  .hero_section {
+    grid-template-columns: 1fr;
+  }
+  .hero_section_img {
+    order: -1;
+    margin-left: 0;
+    min-height: 300px;
+  }
+  .hero_section_img img {
+    position: relative;
+  }
+  .hero_section_img::after {
+    top: 22%;
+    height: 72%;
+    right: -19%;
+  }
+  .hero_section_text {
+    width: 85%;
+    margin: 2rem auto;
+    text-align: center;
+  }
+  .hero_section_text h1 {
+    font-size: 1.4rem;
+  }
+  .hero_section_text p {
+    font-size: 0.9rem;
+    color: rgb(157, 163, 176);
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .buttons_get_it {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .button_chrome,
+  .button_firefox {
+    font-size: 0.6rem;
+    padding: 0.5rem 1rem;
+  }
+  .button_chrome {
+    color: white;
+    background-color: rgb(82, 102, 223);
+    margin-right: 0.4rem;
+  }
+  .button_chrome:hover {
+    color: rgb(82, 102, 223) !important ;
+  }
+  .button_firefox {
+    background-color: white;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    color: rgb(157, 163, 176);
+  }
 }
-
