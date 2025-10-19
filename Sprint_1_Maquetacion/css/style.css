@@ -1,7 +1,6 @@
 * {
   padding: 0;
   margin: 0;
-  border: none;
   font-family: "Rubik", sans-serif;
 }
 body {
@@ -11,8 +10,9 @@ body {
 }
 
 main {
-  section {
-    margin: 2rem 0 2rem;
+  overflow-x: hidden;
+  section{
+    margin-top: 2rem;
   }
   p {
     line-height: 1.8;
