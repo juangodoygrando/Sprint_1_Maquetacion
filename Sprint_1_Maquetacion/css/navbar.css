@@ -4,9 +4,7 @@
   align-items: center;
   max-width: 85%;
   margin: 2rem auto;
-  position: sticky;
-  
-  
+  position: sticky; 
   z-index: 100;
 
   .logo_bookmark {
