@@ -314,6 +314,66 @@ main {
   margin-top: 6rem;
 }
 
+/* FAQ SECTION CSS */
+
+.faq_section {
+  width: 40%;
+  margin: 0 auto;
+}
+.faq_section h3 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+.faq_section p {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: rgb(107, 114, 128);
+}
+.faq_item {
+  border-top: solid rgb(154, 157, 164) 1px;
+}
+
+.faq_question {
+  display: flex;
+  justify-content: space-between;
+  list-style: none !important;
+  width: 100%;
+  margin: 1rem 0 1rem 0;
+}
+.icon {
+  color: #5267df;
+}
+.faq_question:hover {
+  color: rgb(224, 77, 77);
+  cursor: pointer;
+}
+.faq_answer p {
+  text-align: start;
+}
+.faq_answer {
+  margin: 2rem 0 1rem 0;
+}
+.faq_item[open] .faq_question .icon {
+  color: rgb(224, 77, 77);
+}
+.faq_item[open] .icon {
+  color: rgb(224, 77, 77);
+  transform: rotate(180deg);
+  transition: all 0.4s ease-out;
+}
+.faq_button {
+  padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+  background-color: rgb(83, 104, 223);
+  border: 2px solid rgb(83, 104, 223);
+  border-radius: 5px;
+  color: white;
+}
+.faq_button_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
 
 /* MEDIA QUERY */
 
@@ -472,7 +532,6 @@ main {
     display: none;
   }
 
-
   /* DOWNLOAD EXTENSION CSS */
 
   .download_extensions {
@@ -502,5 +561,10 @@ main {
   }
   .card:nth-child(3) {
     margin-top: 0;
+  }
+
+  /* FAQ SECTION CSS */
+  .faq_section {
+    width: 85%;
   }
 }
