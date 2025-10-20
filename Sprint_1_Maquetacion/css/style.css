@@ -142,6 +142,53 @@ main {
   border: 2px solid rgb(57, 58, 60);
 }
 
+/* FEATURE SECTION CSS
+ */
+
+.features_section div {
+  text-align: center;
+  justify-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+.features_section p {
+  width: 35%;
+  color: rgb(107, 114, 128);
+  margin: 1.5rem auto 3rem;
+  text-align: center;
+  justify-items: center;
+  margin: 0 auto 1rem;
+}
+.features_section h2 {
+  font-weight: 500;
+  text-align: center;
+  justify-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.features_section_buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.features_section_buttons button {
+  width: 100%;
+  background-color: white;
+  border: none;
+  padding: 1.2rem 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+}
+.features_section_buttons button:hover {
+  color: rgb(224, 77, 77);
+  cursor: pointer;
+}
+
+.features_section_buttons .simple_bookmarking_button {
+  border-bottom: solid rgb(224, 77, 77) 3px;
+}
+
 /* MEDIA QUERY */
 
 @media (max-width: 768px) {
@@ -209,5 +256,57 @@ main {
     background-color: white;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
     color: rgb(157, 163, 176);
+  }
+
+  /* FEATURE SECTION  */
+
+  .features_section {
+    margin-top: 6rem;
+    min-width: 75%;
+  }
+  .features_section p {
+    width: 90%;
+    font-size: small;
+    color: rgb(152, 149, 145);
+  }
+  .features_section h2 {
+    font-size: 1.2rem;
+  }
+  .features_section_buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    min-width: 75%;
+    margin-top: 2rem;
+  }
+  .simple_bookmarking_button {
+    border-bottom: none !important;
+    z-index: 0;
+  }
+  .simple_bookmarking_button::after {
+    content: "  ";
+    position: absolute;
+    z-index: 1;
+    height: 6px;
+    width: 60%;
+    margin: auto;
+    background-color: rgb(249, 89, 91);
+    right: 20%;
+    top: 96%;
+  }
+
+  .simple_bookmarking_button,
+  .speedy_searching_button,
+  .easy_sharing_button {
+    border-top: solid rgb(157, 163, 176) 1px !important;
+  }
+  .easy_sharing_button {
+    border-bottom: solid rgb(157, 163, 176) 1px !important;
+  }
+
+  .features_section_buttons button:hover {
+    color: black !important;
+    font-weight: 500;
+    cursor: pointer;
   }
 }
