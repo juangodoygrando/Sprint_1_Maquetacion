@@ -1,0 +1,91 @@
+@use "../abstracts/variables" as *;
+
+.features_section {
+  text-align: center;
+  margin: 4rem 0 4rem;
+  div {
+    width: 50%;
+    margin: 0 auto;
+  }
+  p {
+    width: 35%;
+    color: $color-text-gray;
+    margin: 0 auto 1rem;
+  }
+  h2 {
+    font-weight: 500;
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.features_section_buttons {
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    width: 100%;
+    background-color: $color-white;
+    border: none;
+    padding: 1.2rem 0;
+    transition: color 0.3s ease;
+    position: relative;
+    &:hover {
+      color: $color-secondary;
+      cursor: pointer;
+    }
+  }
+  .simple_bookmarking_button {
+    border-bottom: solid $color-secondary 3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features_section {
+    min-width: 75%;
+    p {
+      width: 90%;
+      font-size: $font-size-sm;
+      color: rgb(152, 149, 145);
+    }
+    h2 {
+      font-size: $font-size-lg;
+    }
+  }
+
+  .features_section_buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-width: 75%;
+    margin-top: 2rem;
+    button {
+      &:hover {
+        color: $color-black !important;
+        font-weight: 500;
+      }
+      &:last-child {
+        border-bottom: 1px solid $color-text-light;
+      }
+    }
+    .simple_bookmarking_button,
+    .speedy_searching_button,
+    .easy_sharing_button {
+      border-top: solid $color-text-light 1px;
+    }
+    .simple_bookmarking_button {
+      border-bottom: none !important;
+      z-index: 0;
+      &:after {
+        content: "  ";
+        position: absolute;
+        z-index: 1;
+        height: 6px;
+        width: 60%;
+        margin: auto;
+        background-color: $color-secondary;
+        right: 20%;
+        top: 96%;
+      }
+    }
+  }
+}

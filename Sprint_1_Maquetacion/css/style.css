@@ -1,8 +1,14 @@
+@charset "UTF-8";
+/* COLORES */
+/* TIPOGRAFIA Y TAMAÑOS */
+/* OTROS */
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: "Rubik", sans-serif;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -11,15 +17,13 @@ body {
 
 main {
   overflow-x: hidden;
-  section {
-    margin-top: 2rem;
-  }
-  p {
-    line-height: 1.8;
-  }
 }
-
-/* NAVBAR CSS */
+main section {
+  margin-top: 1.5rem;
+}
+main p {
+  line-height: 1.8;
+}
 
 .navbar {
   display: flex;
@@ -30,10 +34,12 @@ main {
   position: sticky;
   z-index: 100;
 }
+
 .logo_bookmark_navbar {
   margin-left: 1.5rem;
   height: 1.8rem;
 }
+
 .navbar_list {
   display: flex;
   margin: 1rem;
@@ -45,33 +51,40 @@ main {
 }
 .navbar_list li a {
   text-decoration: none;
-  color: black;
-  cursor: pointer;
-  a:hover {
-    cursor: pointer;
-    transform: 2px;
-  }
+  color: rgb(0, 0, 0);
 }
+.navbar_list li a:hover {
+  color: rgb(249, 89, 91);
+}
+
 .btn_login {
   border-radius: 5px;
   background-color: rgb(249, 89, 91);
   border: 2px solid rgb(249, 89, 91);
-  color: white;
+  color: #ffffff;
   padding: 0.4rem 1rem;
-  transition: all 0.2s ease;
 }
 .btn_login:hover {
-  background-color: white;
+  background-color: #ffffff;
   color: rgb(249, 89, 91);
   border: 2px solid rgb(249, 89, 91);
-  cursor: pointer;
 }
+
 .hamburguer_menu {
   display: none;
 }
 
-/* HERO SECTION CSS*/
-
+@media (max-width: 768px) {
+  .hamburguer_menu {
+    display: flex;
+  }
+  .logo_bookmark_navbar {
+    margin-left: 0;
+  }
+  .navbar_list {
+    display: none;
+  }
+}
 .hero_section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -89,12 +102,12 @@ main {
   margin-bottom: 1.5rem;
   color: rgb(157, 163, 176);
 }
+
 .hero_section_img {
   margin-left: 2rem;
   position: relative;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 5/4;
 }
-
 .hero_section_img img {
   width: 100%;
   height: 100%;
@@ -103,7 +116,7 @@ main {
   object-fit: contain;
   z-index: 2;
 }
-.hero_section_img::after {
+.hero_section_img:after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -114,54 +127,104 @@ main {
   right: -25%;
   top: 35%;
 }
+
 .button_chrome {
   background-color: rgb(82, 102, 223);
-  color: white;
-  border: none;
+  color: #ffffff;
+  border: 2px solid rgb(82, 102, 223);
   padding: 0.7rem 1.2rem;
   border-radius: 5px;
   cursor: pointer;
   margin-right: 1rem;
 }
 .button_chrome:hover {
-  background-color: white;
+  background-color: #ffffff;
   color: rgb(82, 102, 223);
-  border: 2px solid rgb(82, 102, 223);
+  border-color: rgb(82, 102, 223);
 }
 
 .button_firefox {
-  background-color: white;
+  background-color: #ffffff;
   color: rgb(157, 163, 176);
   padding: 0.7rem 1.2rem;
+  border: 2px solid #ffffff;
   border-radius: 5px;
   box-shadow: 0 3px 5px rgba(73, 73, 73, 0.15);
-  border: none;
 }
 .button_firefox:hover {
   color: rgb(57, 58, 60);
-  border: 2px solid rgb(57, 58, 60);
+  border-color: rgb(57, 58, 60);
 }
 
-/* FEATURE SECTION CSS */
-
-.features_section div {
+@media (max-width: 768px) {
+  .hero_section {
+    grid-template-columns: 1fr;
+  }
+  .hero_section_img {
+    order: -1;
+    margin-left: 0;
+    min-height: 300px;
+  }
+  .hero_section_img img {
+    position: relative;
+  }
+  .hero_section_img:after {
+    top: 22%;
+    height: 72%;
+    right: -19%;
+  }
+  .hero_section_text {
+    width: 85%;
+    margin: 2rem auto;
+    text-align: center;
+  }
+  .hero_section_text h1 {
+    font-size: 1.4rem;
+  }
+  .hero_section_text p {
+    font-size: 0.9rem;
+    color: rgb(157, 163, 176);
+  }
+  .buttons_get_it {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .button_chrome,
+  .button_firefox {
+    font-size: 0.6rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-right: 0;
+  }
+  .button_chrome {
+    color: #ffffff;
+    background-color: rgb(82, 102, 223);
+  }
+  .button_chrome:hover {
+    color: rgb(82, 102, 223);
+  }
+  .button_firefox {
+    background-color: #ffffff;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    color: rgb(157, 163, 176);
+  }
+}
+.features_section {
   text-align: center;
-  justify-items: center;
+  margin: 4rem 0 4rem;
+}
+.features_section div {
   width: 50%;
   margin: 0 auto;
 }
 .features_section p {
   width: 35%;
   color: rgb(107, 114, 128);
-  margin: 1.5rem auto 3rem;
-  text-align: center;
-  justify-items: center;
   margin: 0 auto 1rem;
 }
 .features_section h2 {
   font-weight: 500;
-  text-align: center;
-  justify-items: center;
   width: 50%;
   margin: 0 auto;
 }
@@ -172,49 +235,90 @@ main {
 }
 .features_section_buttons button {
   width: 100%;
-  background-color: white;
+  background-color: #ffffff;
   border: none;
   padding: 1.2rem 0;
-  cursor: pointer;
   transition: color 0.3s ease;
   position: relative;
 }
 .features_section_buttons button:hover {
-  color: rgb(224, 77, 77);
+  color: rgb(249, 89, 91);
   cursor: pointer;
 }
-
 .features_section_buttons .simple_bookmarking_button {
-  border-bottom: solid rgb(224, 77, 77) 3px;
+  border-bottom: solid rgb(249, 89, 91) 3px;
 }
 
-/* BOOKMARK SECTION CSS*/
-
+@media (max-width: 768px) {
+  .features_section {
+    min-width: 75%;
+  }
+  .features_section p {
+    width: 90%;
+    font-size: 0.9rem;
+    color: rgb(152, 149, 145);
+  }
+  .features_section h2 {
+    font-size: 1.2rem;
+  }
+  .features_section_buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-width: 75%;
+    margin-top: 2rem;
+  }
+  .features_section_buttons button:hover {
+    color: rgb(0, 0, 0) !important;
+    font-weight: 500;
+  }
+  .features_section_buttons button:last-child {
+    border-bottom: 1px solid rgb(157, 163, 176);
+  }
+  .features_section_buttons .simple_bookmarking_button,
+  .features_section_buttons .speedy_searching_button,
+  .features_section_buttons .easy_sharing_button {
+    border-top: solid rgb(157, 163, 176) 1px;
+  }
+  .features_section_buttons .simple_bookmarking_button {
+    border-bottom: none !important;
+    z-index: 0;
+  }
+  .features_section_buttons .simple_bookmarking_button:after {
+    content: "  ";
+    position: absolute;
+    z-index: 1;
+    height: 6px;
+    width: 60%;
+    margin: auto;
+    background-color: rgb(249, 89, 91);
+    right: 20%;
+    top: 96%;
+  }
+}
 .bookmark_section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 4rem;
 }
+
 .bookmark_section_text {
   width: 80%;
   margin: 4rem auto;
 }
-
 .bookmark_section_text h2 {
   margin-bottom: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
 }
-
 .bookmark_section_text p {
   margin-bottom: 1.5rem;
   color: rgb(107, 114, 128);
 }
+
 .bookmark_section_img {
   margin-left: 2rem;
   position: relative;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 5/4;
 }
-
 .bookmark_section_img img {
   width: 100%;
   height: 100%;
@@ -224,14 +328,13 @@ main {
   z-index: 2;
   margin-left: auto;
 }
-
-.bookmark_section_img::after {
+.bookmark_section_img:after {
   content: "";
   position: absolute;
   z-index: 1;
   width: 110%;
   height: 100%;
-  background-color: rgb(83, 104, 223);
+  background-color: rgb(82, 102, 223);
   border-radius: 0 200px 200px 0;
   left: -25%;
   top: 17%;
@@ -239,17 +342,50 @@ main {
 
 .button_more_info {
   padding: 0.8rem 1.5rem 0.8rem 1.5rem;
-  background-color: rgb(83, 104, 223);
-  border: 2px solid rgb(83, 104, 223);
+  background-color: rgb(82, 102, 223);
+  border: 2px solid rgb(82, 102, 223);
   border-radius: 5px;
-  color: white;
+  color: #ffffff;
 }
 
-/* DOWNLOAD EXTENSION CSS */
-
+@media (max-width: 768px) {
+  .bookmark_section {
+    grid-template-columns: 1fr;
+  }
+  .bookmark_section_img {
+    order: -1;
+    margin: 0;
+  }
+  .bookmark_section_img img {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+  .bookmark_section_img:after {
+    top: 20%;
+    height: 100%;
+    width: 105%;
+  }
+  .bookmark_section_text {
+    width: 85%;
+    margin: 4rem auto;
+    text-align: center;
+  }
+  .bookmark_section_text h2 {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  .bookmark_section_text p {
+    font-size: 0.9rem;
+    color: rgb(124, 126, 128);
+  }
+  .button_more_info {
+    display: none;
+  }
+}
 .download_extensions {
   margin: 7rem 0 5rem 0;
 }
+
 .download_extensions_text {
   text-align: center;
   margin-bottom: 5rem;
@@ -264,6 +400,7 @@ main {
   text-align: center;
   color: rgb(107, 114, 128);
 }
+
 .extensions_cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -271,6 +408,7 @@ main {
   margin: 0 auto;
   gap: 2rem;
 }
+
 .card {
   display: flex;
   flex-direction: column;
@@ -289,33 +427,57 @@ main {
 }
 .card button {
   margin-bottom: 1.2rem;
-}
-.card .linea_punteada {
-  margin-top: 1.5rem;
-}
-.card button {
-  background-color: rgb(83, 104, 223);
+  background-color: rgb(82, 102, 223);
   padding: 0.8rem 1.3rem 0.8rem 1.3rem;
+  border: none;
   border-radius: 5px;
-  color: white;
+  color: #ffffff;
 }
 .card button:hover {
-  background-color: white;
-  border: solid rgb(83, 104, 223);
-  color: rgb(83, 104, 223);
+  background-color: #ffffff;
+  border: solid rgb(82, 102, 223);
+  color: rgb(82, 102, 223);
   border-radius: 5px;
   cursor: pointer;
 }
 .card:nth-child(2) {
   margin-top: 3rem;
 }
-
 .card:nth-child(3) {
   margin-top: 6rem;
 }
+.card .linea_punteada {
+  margin-top: 1.5rem;
+}
 
-/* FAQ SECTION CSS */
-
+@media (max-width: 768px) {
+  .download_extensions {
+    margin: 2rem 0 1rem 0;
+  }
+  .download_extensions_text h2 {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    margin: 1rem;
+  }
+  .download_extensions_text p {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .extensions_cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 75%;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  .card:nth-child(2) {
+    margin-top: 0;
+  }
+  .card:nth-child(3) {
+    margin-top: 0;
+  }
+}
 .faq_section {
   width: 40%;
   margin: 0 auto;
@@ -330,8 +492,9 @@ main {
   margin-bottom: 3rem;
   color: rgb(107, 114, 128);
 }
+
 .faq_item {
-  border-top: solid rgb(154, 157, 164) 1px;
+  border-top: solid rgb(157, 163, 176) 1px;
 }
 
 .faq_question {
@@ -341,56 +504,64 @@ main {
   width: 100%;
   margin: 1rem 0 1rem 0;
 }
-.icon {
-  color: #5267df;
-}
 .faq_question:hover {
-  color: rgb(224, 77, 77);
+  color: rgb(249, 89, 91);
   cursor: pointer;
+}
+
+.icon {
+  color: rgb(82, 102, 223);
+}
+
+.faq_answer {
+  margin: 2rem 0 1rem 0;
 }
 .faq_answer p {
   text-align: start;
 }
-.faq_answer {
-  margin: 2rem 0 1rem 0;
-}
+
 .faq_item[open] .faq_question .icon {
-  color: rgb(224, 77, 77);
+  color: rgb(249, 89, 91);
 }
+
 .faq_item[open] .icon {
-  color: rgb(224, 77, 77);
+  color: rgb(249, 89, 91);
   transform: rotate(180deg);
   transition: all 0.4s ease-out;
 }
+
 .faq_button {
   padding: 0.8rem 1.5rem 0.8rem 1.5rem;
-  background-color: rgb(83, 104, 223);
-  border: 2px solid rgb(83, 104, 223);
+  background-color: rgb(82, 102, 223);
+  border: 2px solid rgb(82, 102, 223);
   border-radius: 5px;
-  color: white;
+  color: #ffffff;
 }
+
 .faq_button_container {
   display: flex;
   justify-content: center;
   margin-top: 3rem;
 }
 
-/* CONTACT SECTION CSS */
+@media (max-width: 768px) {
+  .faq_section {
+    width: 85%;
+  }
+}
 .contact_section {
-  background-color: rgb(75, 75, 205);
+  background-color: rgb(82, 102, 223);
   padding: 3rem 0;
-  color: white;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 3.5rem;
 }
-
 .contact_section p {
   font-size: 14px;
   letter-spacing: 8px;
 }
-
 .contact_section h2 {
   width: 30%;
   text-align: center;
@@ -400,7 +571,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
 }
 
@@ -413,17 +584,15 @@ main {
   width: 100%;
   padding: 0.7rem 2.5rem 0.7rem 0.5rem;
   border-radius: 5px;
-  box-sizing: border-box;
+  border: none;
   font-size: 14px;
 }
-
 #input_email::placeholder {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
 }
-
 #input_email.error {
-  border: 3px solid rgb(224, 77, 77);
+  border: 3px solid rgb(249, 89, 91);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -435,7 +604,6 @@ main {
   right: 10px;
   display: none;
 }
-
 .error_icon.show {
   display: block;
 }
@@ -447,35 +615,55 @@ main {
   width: 100%;
   padding: 0.4rem 0.5rem;
   font-size: 0.75rem;
-  background-color: rgb(224, 77, 77);
-  color: white;
+  background-color: rgb(249, 89, 91);
+  color: #ffffff;
   border-radius: 0 0 5px 5px;
   box-sizing: border-box;
   display: none;
+  font-style: italic;
 }
-
 .error_message.show {
   display: block;
 }
 
 .button_contact {
-  background-color: rgb(224, 77, 77);
+  background-color: rgb(249, 89, 91);
   padding: 0.7rem 1.5rem;
-  color: white;
+  color: #ffffff;
   border-radius: 5px;
-  border: 2px solid rgb(224, 77, 77);
+  border: 2px solid rgb(249, 89, 91);
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 14px;
 }
-
 .button_contact:hover {
-  background-color: white;
-  color: rgb(224, 77, 77);
+  background-color: #ffffff;
+  color: rgb(249, 89, 91);
 }
 
-/* FOOTER CSS */
+@media (max-width: 768px) {
+  .contact_section {
+    row-gap: 2rem;
+  }
+  .contact_section h2 {
+    width: 90%;
+  }
+  .form_email {
+    flex-direction: column;
+    width: 90%;
+    gap: 1rem;
+  }
+  .input_div {
+    width: 100%;
+  }
+  .button_contact {
+    width: 100%;
+  }
+  .button_contact.has_error {
+    margin-top: 2rem;
+  }
+}
 .footer {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
@@ -505,6 +693,7 @@ main {
 .nav_footer a:hover {
   color: rgb(249, 89, 91);
 }
+
 .social_icons {
   display: flex;
   gap: 1.5rem;
@@ -517,234 +706,15 @@ main {
 .social_icons a:hover {
   transform: scale(1.1);
 }
+
 .social_icon {
   height: 30px;
 }
-.social_icons a:hover .social_icon {
-  filter: brightness(0) saturate(100%) invert(41%) sepia(78%) saturate(3048%)
-    hue-rotate(338deg) brightness(99%) contrast(97%);
+.social_icon:hover {
+  filter: brightness(0) saturate(100%) invert(41%) sepia(78%) saturate(3048%) hue-rotate(338deg) brightness(99%) contrast(97%);
 }
 
-/* MEDIA QUERY */
-
 @media (max-width: 768px) {
-  /* NAVBAR */
-  .hamburguer_menu {
-    display: flex;
-  }
-
-  .logo_bookmark_navbar {
-    margin-left: 0;
-  }
-  .navbar_list {
-    display: none;
-  }
-
-  /* HERO SECTION */
-
-  .hero_section {
-    grid-template-columns: 1fr;
-  }
-  .hero_section_img {
-    order: -1;
-    margin-left: 0;
-    min-height: 300px;
-  }
-  .hero_section_img img {
-    position: relative;
-  }
-  .hero_section_img::after {
-    top: 22%;
-    height: 72%;
-    right: -19%;
-  }
-  .hero_section_text {
-    width: 85%;
-    margin: 2rem auto;
-    text-align: center;
-  }
-  .hero_section_text h1 {
-    font-size: 1.4rem;
-  }
-  .hero_section_text p {
-    font-size: 0.9rem;
-    color: rgb(157, 163, 176);
-  }
-
-  .buttons_get_it {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .button_chrome,
-  .button_firefox {
-    font-size: 0.6rem;
-    padding: 0.5rem 1rem;
-  }
-  .button_chrome {
-    color: white;
-    background-color: rgb(82, 102, 223);
-    margin-right: 0.4rem;
-  }
-  .button_chrome:hover {
-    color: rgb(82, 102, 223) !important ;
-  }
-  .button_firefox {
-    background-color: white;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
-    color: rgb(157, 163, 176);
-  }
-
-  /* FEATURE SECTION  */
-
-  .features_section {
-    margin-top: 6rem;
-    min-width: 75%;
-  }
-  .features_section p {
-    width: 90%;
-    font-size: small;
-    color: rgb(152, 149, 145);
-  }
-  .features_section h2 {
-    font-size: 1.2rem;
-  }
-  .features_section_buttons {
-    display: grid;
-    grid-template-columns: 1fr;
-
-    min-width: 75%;
-    margin-top: 2rem;
-  }
-  .simple_bookmarking_button {
-    border-bottom: none !important;
-    z-index: 0;
-  }
-  .simple_bookmarking_button::after {
-    content: "  ";
-    position: absolute;
-    z-index: 1;
-    height: 6px;
-    width: 60%;
-    margin: auto;
-    background-color: rgb(249, 89, 91);
-    right: 20%;
-    top: 96%;
-  }
-
-  .simple_bookmarking_button,
-  .speedy_searching_button,
-  .easy_sharing_button {
-    border-top: solid rgb(157, 163, 176) 1px !important;
-  }
-  .easy_sharing_button {
-    border-bottom: solid rgb(157, 163, 176) 1px !important;
-  }
-
-  .features_section_buttons button:hover {
-    color: black !important;
-    font-weight: 500;
-    cursor: pointer;
-  }
-
-  /* BOOKMARK SECTION */
-  .bookmark_section {
-    grid-template-columns: 1fr;
-  }
-  .bookmark_section_img {
-    order: -1;
-    margin: 0;
-  }
-
-  .bookmark_section_img img {
-    max-width: 85%;
-    margin: 0 auto;
-  }
-  .bookmark_section_img::after {
-    top: 20%;
-    height: 100%;
-    width: 105%;
-  }
-
-  .bookmark_section_text {
-    width: 85%;
-    margin: 4rem auto;
-    text-align: center;
-  }
-  .bookmark_section_text h2 {
-    font-weight: 500;
-    font-size: 1.1rem;
-  }
-  .bookmark_section_text p {
-    font-size: 0.9rem;
-    color: rgb(124, 126, 128);
-  }
-  .button_more_info {
-    display: none;
-  }
-
-  /* DOWNLOAD EXTENSION CSS */
-
-  .download_extensions {
-    margin: 2rem 0 1rem 0;
-  }
-
-  .download_extensions_text h2 {
-    width: 85%;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    margin: 1rem;
-  }
-  .download_extensions_text p {
-    width: 85%;
-    margin: 0 auto;
-  }
-
-  .extensions_cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 75%;
-    margin: 0 auto;
-    gap: 2rem;
-  }
-  .card:nth-child(2) {
-    margin-top: 0;
-  }
-  .card:nth-child(3) {
-    margin-top: 0;
-  }
-
-  /* FAQ SECTION CSS */
-  .faq_section {
-    width: 85%;
-  }
-
-  /* CONTACT SECTION  */
-  .contact_section {
-    row-gap: 2rem;
-  }
-
-  .contact_section h2 {
-    width: 90%;
-  }
-
-  .form_email {
-    flex-direction: column;
-    width: 90%;
-    gap: 1rem;
-  }
-
-  .input_div {
-    width: 100%;
-  }
-
-  .button_contact {
-    width: 100%;
-  }
-  .button_contact.has_error {
-    margin-top: 2rem;
-  }
-
-  /* FOOTER */
   .footer {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -767,3 +737,5 @@ main {
     gap: 2rem;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

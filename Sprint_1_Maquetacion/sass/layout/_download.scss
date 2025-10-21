@@ -1,0 +1,101 @@
+@use "../abstracts/variables" as *;
+
+.download_extensions {
+  margin: 7rem 0 5rem 0;
+}
+.download_extensions_text {
+  text-align: center;
+  margin-bottom: 5rem;
+  h2 {
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+  p {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    color: $color-text-gray;
+  }
+}
+
+.extensions_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 75%;
+  margin: 0 auto;
+  gap: 2rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    margin-bottom: 1.2rem;
+  }
+  h3 {
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+  }
+  p {
+    margin-bottom: 1.2rem;
+    color: $color-text-gray;
+  }
+  button {
+    margin-bottom: 1.2rem;
+    background-color: $color-primary;
+    padding: 0.8rem 1.3rem 0.8rem 1.3rem;
+    border: none;
+    border-radius: $border-radius;
+    color: $color-white;
+    &:hover {
+      background-color: $color-white;
+      border: solid $color-primary;
+      color: $color-primary;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  &:nth-child(2) {
+    margin-top: 3rem;
+  }
+
+  &:nth-child(3) {
+    margin-top: 6rem;
+  }
+  .linea_punteada {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .download_extensions {
+    margin: 2rem 0 1rem 0;
+  }
+
+  .download_extensions_text {
+    h2 {
+      width: 85%;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      margin: 1rem;
+    }
+    p {
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
+
+  .extensions_cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 75%;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  .card:nth-child(2) {
+    margin-top: 0;
+  }
+  .card:nth-child(3) {
+    margin-top: 0;
+  }
+}

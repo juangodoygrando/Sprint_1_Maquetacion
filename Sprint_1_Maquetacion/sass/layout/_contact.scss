@@ -1,0 +1,119 @@
+@use "../abstracts/variables" as *;
+
+.contact_section {
+  background-color: $color-primary;
+  padding: 3rem 0;
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3.5rem;
+  p {
+    font-size: 14px;
+    letter-spacing: 8px;
+  }
+  h2 {
+    width: 30%;
+    text-align: center;
+  }
+}
+
+.form_email {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.input_div {
+  position: relative;
+  width: 20%;
+}
+
+#input_email {
+  width: 100%;
+  padding: 0.7rem 2.5rem 0.7rem 0.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+
+  &::placeholder {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  &.error {
+    border: 3px solid $color-secondary;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+.error_icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  display: none;
+  &.show {
+    display: block;
+  }
+}
+.error_message {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.75rem;
+  background-color: $color-secondary;
+  color: $color-white;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+  display: none;
+  font-style: italic;
+  &.show {
+    display: block;
+  }
+}
+
+.button_contact {
+  background-color: $color-secondary;
+  padding: 0.7rem 1.5rem;
+  color: $color-white;
+  border-radius: 5px;
+  border: 2px solid $color-secondary;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  &:hover {
+    background-color: $color-white;
+    color: $color-secondary;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact_section {
+    row-gap: 2rem;
+    h2 {
+      width: 90%;
+    }
+  }
+
+  .form_email {
+    flex-direction: column;
+    width: 90%;
+    gap: 1rem;
+  }
+
+  .input_div {
+    width: 100%;
+  }
+
+  .button_contact {
+    width: 100%;
+    &.has_error {
+      margin-top: 2rem;
+    }
+  }
+}

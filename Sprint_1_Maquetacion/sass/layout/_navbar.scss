@@ -1,0 +1,60 @@
+@use "../abstracts/variables" as *;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 85%;
+  margin: 2rem auto;
+  position: sticky;
+  z-index: 100;
+}
+.logo_bookmark_navbar {
+  margin-left: 1.5rem;
+  height: 1.8rem;
+}
+.navbar_list {
+  display: flex;
+  margin: 1rem;
+  align-items: center;
+  li {
+    list-style: none;
+    margin-left: 1rem;
+    a {
+      text-decoration: none;
+      color: $color-black;
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+}
+.btn_login {
+  border-radius: $border-radius;
+  background-color: $color-secondary;
+  border: 2px solid $color-secondary;
+  color: $color-white;
+  padding: 0.4rem 1rem;
+  &:hover {
+    background-color: $color-white;
+    color: $color-secondary;
+    border: 2px solid $color-secondary;
+  }
+}
+
+.hamburguer_menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburguer_menu {
+    display: flex;
+  }
+
+  .logo_bookmark_navbar {
+    margin-left: 0;
+  }
+  .navbar_list {
+    display: none;
+  }
+}

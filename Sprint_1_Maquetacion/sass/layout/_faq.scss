@@ -1,0 +1,68 @@
+@use "../abstracts/variables" as *;
+
+.faq_section {
+  width: 40%;
+  margin: 0 auto;
+  h3 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 500;
+  }
+  p {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: $color-text-gray;
+  }
+}
+
+.faq_item {
+  border-top: solid $color-text-light 1px;
+}
+
+.faq_question {
+  display: flex;
+  justify-content: space-between;
+  list-style: none !important;
+  width: 100%;
+  margin: 1rem 0 1rem 0;
+  &:hover {
+    color: $color-secondary;
+    cursor: pointer;
+  }
+}
+.icon {
+  color: $color-primary;
+}
+
+.faq_answer {
+  margin: 2rem 0 1rem 0;
+  p {
+    text-align: start;
+  }
+}
+.faq_item[open] .faq_question .icon {
+  color: $color-secondary;
+}
+.faq_item[open] .icon {
+  color: $color-secondary;
+  transform: rotate(180deg);
+  transition: all 0.4s ease-out;
+}
+.faq_button {
+  padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+  background-color: $color-primary;
+  border: 2px solid $color-primary;
+  border-radius: $border-radius;
+  color: $color-white;
+}
+.faq_button_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .faq_section {
+    width: 85%;
+  }
+}
