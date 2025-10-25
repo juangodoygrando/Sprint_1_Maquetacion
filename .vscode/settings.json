@@ -1,0 +1,29 @@
+{
+  "tailwindCSS.experimental.classRegex": [
+    ["class:\\s*?[\"'`]([^\"'`]*).*?[\"'`]", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["className:\\s*?[\"'`]([^\"'`]*).*?[\"'`]", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "javascriptreact": "javascript"
+  },
+  
+  "tailwindCSS.files.exclude": [
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/.hg/**",
+    "**/.svn/**"
+  ],
+  
+  "tailwindCSS.lint.cssConflict": "ignore",
+  "tailwindCSS.lint.invalidApply": "ignore",
+  "tailwindCSS.lint.invalidScreen": "ignore",
+  "tailwindCSS.lint.invalidVariant": "ignore",
+  "tailwindCSS.lint.invalidConfigPath": "ignore",
+  "tailwindCSS.lint.invalidTailwindDirective": "ignore",
+  "tailwindCSS.lint.recommendedVariantOrder": "ignore",
+  
+  "css.validate": false
+}

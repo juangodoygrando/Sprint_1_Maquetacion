@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* ===== VARIABLES ===== */
+@layer base {
+  :root {
+    --color-primary: #5265E1;
+    --color-secondary: #FA5959;
+  }
+}
+
+/* ===== CLASES CUSTOM ===== */
+@layer utilities {
+  /* Estados normales */
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  
+  .text-primary {
+    color: var(--color-primary);
+  }
+  
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+  
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+  
+  .border-secondary {
+    border-color: var(--color-secondary);
+  }
+  
+  /* Estados hover EXPLÍCITOS */
+  .hover\:text-secondary:hover {
+    color: var(--color-secondary);
+  }
+  
+  .hover\:text-primary:hover {
+    color: var(--color-primary);
+  }
+  
+  .hover\:bg-secondary:hover {
+    background-color: var(--color-secondary);
+  }
+  
+  .hover\:bg-primary:hover {
+    background-color: var(--color-primary);
+  }
+  
+  .hover\:bg-white:hover {
+    background-color: white;
+  }
+  
+  .hover\:border-secondary:hover {
+    border-color: var(--color-secondary);
+  }
+  
+  .hover\:border-primary:hover {
+    border-color: var(--color-primary);
+  }
+}
+
+/* ===== ESTILOS GLOBALES ===== */
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  
+  overflow-x: hidden;
+}
+
+main p {
+  line-height: 1.8;
+}
+
+
+/* grid grid-cols-1 order-2 mb-20 justify-center ml-0 my-8 md:order-1  md:grid md:grid-cols-2 md:w-8/12 md:mx-auto md:gap-6 max-w-[85%]  */
