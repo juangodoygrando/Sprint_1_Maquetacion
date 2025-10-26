@@ -24,14 +24,16 @@
   <body>
     <!-- En esta seccion se desarrolla el header con su navbar -->
 
-    <header>
+    <header class="overflow-visible">
       <nav
         class="flex justify-between items-center max-w-[85%] mt-12 mx-auto sticky"
+        id="navbar_desktop"
       >
         <img src="./img/logo-bookmark.svg" alt="logo bookmark" class="h-7" />
         <img
           src="./img/icon-hamburger.svg"
           alt="menu_hamburguesa"
+          id="hamburger-btn"
           class="flex md:hidden"
         />
         <ul class="hidden m-4 items-center list-none gap-4 md:flex">
@@ -60,6 +62,67 @@
           </li>
         </ul>
       </nav>
+      <div
+        class="hidden fixed inset-0 z-50 bg-menu-dark-opacity70"
+        id="mobile-menu"
+      >
+        <div class="flex justify-between items-center px-8 py-10">
+          <img
+            src="./img/logo-bookmark-mobile-menu.svg"
+            alt="logo bookmark blanco"
+            class="h-5"
+          />
+          <img
+            src="./img/icon-close.svg"
+            id="close-btn"
+            alt="icono cierre menu hamburguesa"
+            class="cursor-pointer w-4 h-auto"
+          />
+        </div>
+        <nav class="flex flex-col">
+          <div class="border-t border-white border-opacity-30 w-4/5 mx-auto">
+            <a href="#" class="block text-center text-white py-4 text-lg"
+              >FEATURES</a
+            >
+          </div>
+          <div class="border-t border-white border-opacity-30 w-4/5 mx-auto">
+            <a href="#" class="block text-center text-white py-4 text-lg"
+              >PRICING</a
+            >
+          </div>
+          <div class="border-t border-white border-opacity-30 w-4/5 mx-auto">
+            <a href="#" class="block text-center text-white py-4 text-lg"
+              >CONTACT</a
+            >
+          </div>
+          <div
+            class="border-t border-white border-opacity-30 w-4/5 mx-auto"
+          ></div>
+        </nav>
+        <div class="px-8 mt-8">
+          <button
+            class="w-full border-2 border-white text-white py-3 rounded text-lg"
+          >
+            LOGIN
+          </button>
+        </div>
+        <div
+          class="absolute bottom-12 left-0 right-0 flex justify-center gap-8"
+        >
+          <a href=""
+            ><img
+              src="./img/icon-facebook.svg"
+              alt="icono facebook"
+              class="w-6 h-6"
+          /></a>
+          <a href=""
+            ><img
+              src="./img/icon-twitter.svg"
+              alt="icono twiter"
+              class="w-6 h-6"
+          /></a>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -86,7 +149,9 @@
             >
               Get it on Chrome
             </button>
-            <button class="text-xs px-2 py-3 rounded shadow-md text-gray-500 hover:border-2 hover:cursor-pointer">
+            <button
+              class="text-xs px-2 py-3 rounded shadow-md text-gray-500 hover:border-2 hover:cursor-pointer"
+            >
               Get it on Firefox
             </button>
           </div>

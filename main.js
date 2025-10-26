@@ -25,3 +25,24 @@ form_email.addEventListener("submit", (e) => {
     contactButton.classList.add("has_error");
   }
 });
+
+
+/* MENU HAMBURGUESA */
+
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const closeBtn = document.getElementById('close-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const navbarDesktop = document.getElementById('navbar_desktop')
+
+
+hamburgerBtn.addEventListener('click' ,()=>{
+  mobileMenu.classList.remove('hidden')
+  document.body.style.overflow='hidden'
+  navbarDesktop.classList.add('hidden')
+})
+
+closeBtn.addEventListener('click',()=>{
+  mobileMenu.classList.add('hidden')
+  document.body.style.overflow='auto'
+  navbarDesktop.classList.remove('hidden')
+})
