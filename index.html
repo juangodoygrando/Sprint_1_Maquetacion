@@ -26,7 +26,7 @@
 
     <header class="overflow-visible">
       <nav
-        class="flex justify-between items-center max-w-[85%] mt-12 mx-auto sticky"
+        class="flex justify-between items-center max-w-[85%] mt-8 mx-auto sticky"
         id="navbar_desktop"
       >
         <img src="./img/logo-bookmark.svg" alt="logo bookmark" class="h-7" />
@@ -128,12 +128,14 @@
     <main>
       <!-- En esta seccion se desarrollara el hero_section -->
       <section
-        class="grid grid-cols-1 md:grid-cols-2 mx-auto mb-16 p-0 relative"
+        class="grid grid-cols-1 md:grid-cols-2 mx-auto mb-16 p-0 relative lg:w-11/12"
       >
         <div
-          class="w-4/5 mx-auto lg:w-4/5 flex flex-col mt-10 justify-center text-center lg:text-left order-2 lg:order-1 md:mx-auto"
+          class="w-5/6 mx-auto lg:w-4/5 flex flex-col mt-10 justify-center text-center lg:text-left order-2 lg:order-1 md:mx-auto"
         >
-          <h1 class="mb-6 font-bold text-2xl md:text-4xl lg:text-5xl">
+          <h1
+            class="mb-6 font-bold text-2xl md:text-4xl lg:text-5xl min-w-full"
+          >
             A Simple Bookmark Manager
           </h1>
           <p class="mb-6 text-gray-500 text-base md:text-start leading-relaxed">
@@ -171,41 +173,147 @@
       </section>
 
       <!-- En esta seccion se desarrollara el features_section -->
-      <section class="features_section">
-        <h2>Features</h2>
-        <p>
-          Our aim is to make it chick and easy for you to access your favourites
-          websites. Your bookmarks sync between your devices so you can access
-          them on the go.
-        </p>
-
-        <div class="features_section_buttons">
-          <button class="simple_bookmarking_button">Simple Bookmarking</button>
-          <button class="speedy_searching_button">Speedy Searching</button>
-          <button class="easy_sharing_button">Easy Sharing</button>
-        </div>
-      </section>
-
-      <!-- En esta seccion se desarrollara el "Bookmark in one click" -->
-      <section class="bookmark_section">
-        <div class="bookmark_section_img">
-          <img src="./img/illustration-features-tab-1.svg" alt="" />
-        </div>
-        <div class="bookmark_section_text">
-          <h2>Bookmark in one click</h2>
-          <p>
-            Organize your bookmarks however you like. Our simple drag-and-drop
-            interface gives you complete control over how you manage your
-            favourite sites.
+      <section class="mt-32 w-11/12 mx-auto">
+        <div
+          class="flex flex-col justify-center mx-auto gap-4 mb-6 text-center md:w-5/12"
+        >
+          <h2 class="font-bold text-2xl md:text-3xl">Features</h2>
+          <p class="text-gray-500 text-center md:text-base max-w-2xl mx-auto">
+            Our aim is to make it chick and easy for you to access your
+            favourites websites. Your bookmarks sync between your devices so you
+            can access them on the go.
           </p>
-          <div>
-            <button class="button_more_info">More info</button>
+        </div>
+
+        <div
+          class="flex flex-col justify-center gap-8 mb-16 mx-auto border-t border-gray-300 w-11/12 pt-4 md:flex-row md:gap-0 md:border-0"
+        >
+          <button
+            data-tab="1"
+            class="tab-button active text-gray-600 border-b-5 border-secondary max-w-9/12 mx-auto transition-all duration-300 hover:text-secondary md:flex-1"
+          >
+            Simple Bookmarking
+          </button>
+          <button
+            data-tab="2"
+            class="tab-button text-gray-600 border-b-5 border-transparent max-w-7/12 mx-auto transition-all duration-300 hover:text-secondary md:flex-1"
+          >
+            Speedy Searching
+          </button>
+          <button
+            data-tab="3"
+            class="tab-button text-gray-600 border-b-5 border-transparent max-w-7/12 mx-auto transition-all duration-300 hover:text-secondary md:flex-1"
+          >
+            Easy Sharing
+          </button>
+        </div>
+
+        <div>
+          <div
+            data-panel="1"
+            class="tab-panel grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+          >
+            <div
+              class="order-1 md:order-1 flex items-center justify-center relative mt-10 md:justify-end"
+            >
+              <img
+                src="./img/illustration-features-tab-1.svg"
+                alt=""
+                class="w-10/12 md:max-w-lg lg:max-w-full relative z-10"
+              />
+              <div
+                class="bg-primary absolute -left-[10%] -bottom-7 w-[95%] h-[85%] rounded-r-[200px] -z-10 md:w-[72%] md:h-[47%] lg:w-[95%] lg:h-[70%]"
+              ></div>
+            </div>
+            <div
+              class="my-14 flex flex-col items-center text-center px-4 gap-4 order-2 md:order-2 md:text-left md:items-start"
+            >
+              <h2 class="font-bold text-2xl mx-auto">Bookmark in one click</h2>
+              <p class="text-gray-500 text-center">
+                Organize your bookmarks however you like. Our simple
+                drag-and-drop interface gives you complete control over how you
+                manage your favourite sites.
+              </p>
+              <div class="hidden md:block">
+                <button
+                  class="bg-primary text-white px-6 py-3 rounded shadow-md hover:bg-white hover:text-primary hover:border-2 hover:border-primary transition-all"
+                >
+                  More info
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            data-panel="2"
+            class="hidden tab-panel grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+          >
+            <div
+              class="order-1 md:order-1 flex items-center justify-center md:justify-end relative mt-10"
+            >
+              <img
+                src="./img/illustration-features-tab-2.svg"
+                alt=""
+                class="w-10/12 md:max-w-lg lg:max-w-full relative z-10"
+              />
+              <div
+                class="bg-primary absolute -left-[10%] -bottom-7 w-[95%] h-[85%] rounded-r-[200px] -z-10 md:w-[72%] md:h-[47%] lg:w-[95%] lg:h-[75%]"
+              ></div>
+            </div>
+            <div
+              class="my-14 flex flex-col items-center text-center px-4 gap-4 order-2 md:order-2 lg:text-left lg:items-start"
+            >
+              <h2 class="font-bold text-2xl mx-auto">Intelligent search</h2>
+              <p class="text-gray-500 text-center">
+                Our powerful search feature will help you find saved sites in no
+                time at all. No need to trawl through all of your bookmarks.
+              </p>
+              <div class="hidden md:block">
+                <button
+                  class="bg-primary text-white px-6 py-3 rounded shadow-md hover:bg-white hover:text-primary hover:border-2 hover:border-primary transition-all"
+                >
+                  More info
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            data-panel="3"
+            class="hidden tab-panel grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+          >
+            <div
+              class="order-1 md:order-1 flex items-center justify-center md:justify-end relative mt-10"
+            >
+              <img
+                src="./img/illustration-features-tab-3.svg"
+                alt=""
+                class="w-10/12 md:max-w-lg lg:max-w-full relative z-10"
+              />
+              <div
+                class="bg-primary absolute -left-[10%] -bottom-7 w-[95%] h-[85%] rounded-r-[200px] -z-10 md:w-[72%] md:h-[47%] lg:w-[95%] lg:h-[70%]"
+              ></div>
+            </div>
+            <div
+              class="my-14 flex flex-col items-center text-center px-4 gap-4 order-2 md:order-2 lg:text-left lg:items-start"
+            >
+              <h2 class="font-bold text-2xl mx-auto">Share your bookmarks</h2>
+              <p class="text-gray-500 text-center">
+                Easily share your bookmarks and collections with others. Create
+                a shareable link that you can send at the click of a button.
+              </p>
+              <div class="hidden md:block">
+                <button
+                  class="bg-primary text-white px-6 py-3 rounded shadow-md hover:bg-white hover:text-primary hover:border-2 hover:border-primary transition-all"
+                >
+                  More info
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- En esta seccion se desarrollara el download extension-->
-      <section class="download_extensions">
+      <!-- <section class="download_extensions">
         <div class="download_extensions_text">
           <h2>Download the extension</h2>
           <p>
@@ -248,10 +356,10 @@
             <button>Add & install Extension</button>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- En esta seccion se desarrollara el faq -->
-      <section class="faq_section">
+      <!-- <section class="faq_section">
         <h3>Frequently Asked Question</h3>
         <p>
           Here are some of our FAQs. If you have any other question you'd like
@@ -347,10 +455,10 @@
         <div class="faq_button_container">
           <button class="faq_button">More info</button>
         </div>
-      </section>
+      </section> -->
 
       <!-- En esta seccion se desarrollara el contact -->
-      <section class="contact_section">
+      <!-- <section class="contact_section">
         <p>35.000+ ALREADY JOINED</p>
         <h2>Stay up-to-date whit what ww're doing</h2>
         <form class="form_email" novalidate>
@@ -371,10 +479,10 @@
           </div>
           <button type="submit" class="button_contact">Contact Us</button>
         </form>
-      </section>
+      </section> -->
     </main>
     <!-- En esta seccion se desarrollara el footer -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <a href="#Bookmark" class="logo_bookmark_footer"
         ><img src="./img/logo-bookmark-white.svg" alt="Bookmark logo"
       /></a>
@@ -397,7 +505,7 @@
             alt="Twitter icon"
         /></a>
       </div>
-    </footer>
+    </footer> -->
     <script src="main.js"></script>
   </body>
 </html>
