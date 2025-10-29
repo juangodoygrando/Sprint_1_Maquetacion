@@ -72,7 +72,6 @@
   }
 }
 
-  
 /* ===== ESTILOS GLOBALES ===== */
 * {
   font-family: "Rubik", sans-serif;
@@ -82,5 +81,5 @@ body {
 }
 
 main p {
-  line-height: 1.6;
+  line-height: 1.5;
 }

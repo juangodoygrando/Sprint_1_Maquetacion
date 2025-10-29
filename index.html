@@ -134,7 +134,7 @@
           class="w-5/6 mx-auto lg:w-4/5 flex flex-col mt-10 justify-center text-center lg:text-left order-2 lg:order-1 md:mx-auto"
         >
           <h1
-            class="mb-6 font-bold text-2xl md:text-4xl lg:text-5xl min-w-full"
+            class="mb-6 font-medium text-2xl md:text-4xl lg:text-5xl min-w-full"
           >
             A Simple Bookmark Manager
           </h1>
@@ -177,7 +177,7 @@
         <div
           class="flex flex-col justify-center mx-auto gap-4 mb-6 text-center md:w-5/12"
         >
-          <h2 class="font-bold text-2xl md:text-3xl">Features</h2>
+          <h2 class="font-medium text-2xl md:text-3xl">Features</h2>
           <p class="text-gray-500 text-center md:text-base max-w-2xl mx-auto">
             Our aim is to make it chick and easy for you to access your
             favourites websites. Your bookmarks sync between your devices so you
@@ -228,7 +228,9 @@
             <div
               class="my-14 flex flex-col items-center text-center px-4 gap-4 order-2 md:order-2 md:text-left md:items-start"
             >
-              <h2 class="font-bold text-2xl mx-auto">Bookmark in one click</h2>
+              <h2 class="font-medium text-2xl mx-auto">
+                Bookmark in one click
+              </h2>
               <p class="text-gray-500 text-center">
                 Organize your bookmarks however you like. Our simple
                 drag-and-drop interface gives you complete control over how you
@@ -262,7 +264,7 @@
             <div
               class="my-14 flex flex-col items-center text-center px-4 gap-4 order-2 md:order-2 lg:text-left lg:items-start"
             >
-              <h2 class="font-bold text-2xl mx-auto">Intelligent search</h2>
+              <h2 class="font-medium text-2xl mx-auto">Intelligent search</h2>
               <p class="text-gray-500 text-center">
                 Our powerful search feature will help you find saved sites in no
                 time at all. No need to trawl through all of your bookmarks.
@@ -295,7 +297,7 @@
             <div
               class="my-14 flex flex-col items-center text-center px-4 gap-4 order-2 md:order-2 lg:text-left lg:items-start"
             >
-              <h2 class="font-bold text-2xl mx-auto">Share your bookmarks</h2>
+              <h2 class="font-medium text-2xl mx-auto">Share your bookmarks</h2>
               <p class="text-gray-500 text-center">
                 Easily share your bookmarks and collections with others. Create
                 a shareable link that you can send at the click of a button.
@@ -317,7 +319,9 @@
         <div
           class="flex flex-col justify-center mx-auto gap-4 mb-6 text-center md:w-5/12"
         >
-          <h2 class="font-bold text-2xl md:text-3xl">Download the extension</h2>
+          <h2 class="font-medium text-2xl md:text-3xl">
+            Download the extension
+          </h2>
           <p class="text-gray-500 text-center md:text-base max-w-2xl mx-auto">
             We've got more browsers in the pipeline. Please do let us knowif
             you've got a favourite you'd like us to prioritize.
@@ -327,11 +331,7 @@
           class="grid grid-cols-1 justify-center md:grid-cols-3 gap-8 md:gap-6 lg:gap-12 mx-auto w-10/12 md:items-start"
         >
           <div class="flex flex-col items-center text-center shadow-xl rounded">
-            <img
-              src="./img/logo-chrome.svg"
-              alt="logo_crome"
-              class="py-6"
-            />
+            <img src="./img/logo-chrome.svg" alt="logo_crome" class="py-6" />
             <h3>Add to Chrome</h3>
             <p>Minimum version 62</p>
             <img class="py-6" src="./img/bg-dots.svg" alt="linea_punteada" />
@@ -341,12 +341,10 @@
               Add & install Extension
             </button>
           </div>
-          <div class="flex flex-col items-center text-center shadow-xl md:mt-16 rounded">
-            <img
-              src="./img/logo-firefox.svg"
-              alt="logo_firefox"
-              class="py-6"
-            />
+          <div
+            class="flex flex-col items-center text-center shadow-xl md:mt-16 rounded"
+          >
+            <img src="./img/logo-firefox.svg" alt="logo_firefox" class="py-6" />
             <h3>Add to Firefox</h3>
             <p>Minimum version 55</p>
             <img class="py-6" src="./img/bg-dots.svg" alt="linea_punteada" />
@@ -356,7 +354,9 @@
               Add & install Extension
             </button>
           </div>
-          <div class="flex flex-col items-center text-center shadow-xl md:mt-32 rounded">
+          <div
+            class="flex flex-col items-center text-center shadow-xl md:mt-32 rounded"
+          >
             <img src="./img/logo-opera.svg" alt="logo_opera" class="py-6" />
             <h3>Add to Opera</h3>
             <p>Minimum version 46</p>
@@ -371,17 +371,28 @@
       </section>
 
       <!-- En esta seccion se desarrollara el faq -->
-      <!-- <section class="faq_section">
-        <h3>Frequently Asked Question</h3>
-        <p>
-          Here are some of our FAQs. If you have any other question you'd like
-          answered please feel free to email us.
-        </p>
-        <div>
-          <details class="faq_item">
-            <summary class="faq_question">
+      <section class="w-10/12 mx-auto lg:w-4/12">
+        <div class="flex flex-col">
+          <h3
+            class="w-10/12 font-medium text-center text-2xl mx-auto md:text-3xl md:w-11/12"
+          >
+            Frequently Asked Question
+          </h3>
+          <p
+            class="text-gray-500 text-justify md:text-base mx-auto my-6 md:text-center md:w-full md:mx-auto"
+          >
+            Here are some of our FAQs. If you have any other question you'd like
+            answered please feel free to email us.
+          </p>
+        </div>
+        <div class="mb-10 border-solid">
+          <details class="group py-2 border-b border-t border-gray-200">
+            <summary
+              class="list-none flex justify-between hover:cursor-pointer hover:text-secondary"
+            >
               What is Bookmark?
-              <span class="icon"
+              <span
+                class="text-primary group-open:text-[#fa5959] group-open:rotate-180 flex items-center justify-center"
                 ><svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                   <path
                     fill="none"
@@ -391,18 +402,21 @@
                   /></svg
               ></span>
             </summary>
-            <div class="faq_answer">
-              <p>
+            <div>
+              <p class="text-gray-500 text-justify py-4">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At,
                 quibusdam? Porro omnis facilis doloremque labore voluptatem
                 eveniet, aliquid ut.
               </p>
             </div>
           </details>
-          <details class="faq_item">
-            <summary class="faq_question">
+          <details class="group py-2 border-b border-gray-200">
+            <summary
+              class="list-none flex justify-between hover:cursor-pointer hover:text-secondary"
+            >
               How can I request a new browser?
-              <span class="icon"
+              <span
+                class="text-primary group-open:text-[#fa5959] group-open:rotate-180 flex items-center justify-center"
                 ><svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                   <path
                     fill="none"
@@ -412,8 +426,8 @@
                   /></svg
               ></span>
             </summary>
-            <div class="faq_answer">
-              <p>
+            <div>
+              <p class="text-gray-500 text-justify py-4">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
                 aliquam ipsum obcaecati dolores inventore quasi, doloribus, non
                 nostrum voluptate dignissimos ex. Tenetur cum repellat, illum
@@ -422,10 +436,13 @@
               </p>
             </div>
           </details>
-          <details class="faq_item">
-            <summary class="faq_question">
-              Is there a mobile app?
-              <span class="icon"
+          <details class="group py-2 border-b border-gray-200">
+            <summary
+              class="list-none flex justify-between hover:cursor-pointer hover:text-secondary"
+            >
+              Is there a mobile app ?
+              <span
+                class="text-primary group-open:text-[#fa5959] group-open:rotate-180 flex items-center justify-center"
                 ><svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                   <path
                     fill="none"
@@ -435,17 +452,20 @@
                   /></svg
               ></span>
             </summary>
-            <div class="faq_answer">
-              <p>
+            <div>
+              <p class="text-gray-500 text-justify py-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
                 saepe accusantium ad ab unde tempore?
               </p>
             </div>
           </details>
-          <details class="faq_item">
-            <summary class="faq_question">
+          <details class="group py-2 border-b border-gray-200">
+            <summary
+              class="list-none flex justify-between hover:cursor-pointer hover:text-secondary"
+            >
               What about other Chromium browser?
-              <span class="icon"
+              <span
+                class="text-primary group-open:text-[#fa5959] group-open:rotate-180 flex items-center justify-center"
                 ><svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                   <path
                     fill="none"
@@ -455,8 +475,8 @@
                   /></svg
               ></span>
             </summary>
-            <div class="faq_answer">
-              <p>
+            <div>
+              <p class="text-gray-500 text-justify py-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
                 quia deleniti amet, veniam ipsum harum aspernatur vitae
                 perferendis voluptate assumenda.
@@ -464,10 +484,14 @@
             </div>
           </details>
         </div>
-        <div class="faq_button_container">
-          <button class="faq_button">More info</button>
+        <div class="mx-auto text-center mb-7">
+          <button
+            class="text-xs bg-primary px-7 py-3 rounded border-2 shadow-md text-white hover:bg-white hover:border-solid hover:border-2 hover:border-primary hover:text-primary hover:cursor-pointer"
+          >
+            More info
+          </button>
         </div>
-      </section> -->
+      </section>
 
       <!-- En esta seccion se desarrollara el contact -->
       <!-- <section class="contact_section">
