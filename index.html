@@ -128,7 +128,7 @@
     <main>
       <!-- En esta seccion se desarrollara el hero_section -->
       <section
-        class="grid grid-cols-1 md:grid-cols-2 mx-auto mb-16 p-0 relative lg:w-11/12"
+        class="grid grid-cols-1 md:grid-cols-2 mx-auto mb-16 p-0 relative md:w-full"
       >
         <div
           class="w-5/6 mx-auto lg:w-4/5 flex flex-col mt-10 justify-center text-center lg:text-left order-2 lg:order-1 md:mx-auto"
@@ -164,10 +164,10 @@
           <img
             src="./img/illustration-hero.svg"
             alt=""
-            class="w-full max-w-md md:max-w-lg lg:max-w-full relative z-10"
+            class="w-11/12 max-w-md md:max-w-lg lg:max-w-full relative z-10"
           />
           <div
-            class="bg-primary absolute -right-[8%] bottom-0 w-[90%] h-[70%] rounded-l-[200px] -z-10 // md:w-[72%] md:h-[47%] // lg:w-[95%] lg:h-[70%]"
+            class="bg-primary absolute -right-[8%] bottom-0 w-[90%] h-[70%] rounded-l-[200px] -z-10"
           ></div>
         </div>
       </section>
@@ -186,7 +186,7 @@
         </div>
 
         <div
-          class="flex flex-col justify-center gap-8 mb-16 mx-auto border-t border-gray-300 w-11/12 pt-4 md:flex-row md:gap-0 md:border-0"
+          class="flex flex-col justify-center gap-8 mb-16 mx-auto w-11/12 pt-4 md:flex-row md:gap-0 md:border-0"
         >
           <button
             data-tab="1"
@@ -214,7 +214,7 @@
             class="tab-panel grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
           >
             <div
-              class="order-1 md:order-1 flex items-center justify-center relative mt-10 md:justify-end"
+              class="order-1 md:order-1 flex items-center justify-center relative mt-10 md:mt-0 md:justify-end"
             >
               <img
                 src="./img/illustration-features-tab-1.svg"
@@ -222,7 +222,7 @@
                 class="w-10/12 md:max-w-lg lg:max-w-full relative z-10"
               />
               <div
-                class="bg-primary absolute -left-[10%] -bottom-7 w-[95%] h-[85%] rounded-r-[200px] -z-10 md:w-[72%] md:h-[47%] lg:w-[95%] lg:h-[70%]"
+                class="bg-primary absolute -left-[10%] -bottom-7 w-[95%] h-[85%] rounded-r-[200px] -z-10"
               ></div>
             </div>
             <div
@@ -250,7 +250,7 @@
             class="hidden tab-panel grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
           >
             <div
-              class="order-1 md:order-1 flex items-center justify-center md:justify-end relative mt-10"
+              class="order-1 md:order-1 flex items-center justify-center md:justify-end relative mt-10 md:mt-0"
             >
               <img
                 src="./img/illustration-features-tab-2.svg"
@@ -258,7 +258,7 @@
                 class="w-10/12 md:max-w-lg lg:max-w-full relative z-10"
               />
               <div
-                class="bg-primary absolute -left-[10%] -bottom-7 w-[95%] h-[85%] rounded-r-[200px] -z-10 md:w-[72%] md:h-[47%] lg:w-[95%] lg:h-[75%]"
+                class="bg-primary absolute -left-[10%] -bottom-7 w-[95%] h-[85%] rounded-r-[200px] -z-10"
               ></div>
             </div>
             <div
@@ -285,7 +285,7 @@
             class="hidden tab-panel grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
           >
             <div
-              class="order-1 md:order-1 flex items-center justify-center md:justify-end relative mt-10"
+              class="order-1 md:order-1 flex items-center justify-center md:justify-end relative mt-10 md:mt-0"
             >
               <img
                 src="./img/illustration-features-tab-3.svg"
@@ -293,7 +293,7 @@
                 class="w-10/12 md:max-w-lg lg:max-w-full relative z-10"
               />
               <div
-                class="bg-primary absolute -left-[10%] -bottom-7 w-[95%] h-[85%] rounded-r-[200px] -z-10 md:w-[72%] md:h-[47%] lg:w-[95%] lg:h-[70%]"
+                class="bg-primary absolute -left-[10%] -bottom-7 w-[95%] h-[85%] rounded-r-[200px] -z-10"
               ></div>
             </div>
             <div
@@ -498,28 +498,53 @@
       </section>
 
       <!-- En esta seccion se desarrollara el contact -->
-      <!-- <section class="contact_section">
-        <p>35.000+ ALREADY JOINED</p>
-        <h2>Stay up-to-date whit what ww're doing</h2>
-        <form class="form_email" novalidate>
-          <div class="input_div">
-            <input
-              type="email"
-              id="input_email"
-              placeholder="Enter your email address"
-              required
-            />
-            <span class="error_icon">
-              <img
-                src="./img/icon-error.svg"
-                alt="icono error"
-                class="contact_icon_error"
-              /> </span
-            ><span class="error_message">Whoops, make sure it's an email</span>
-          </div>
-          <button type="submit" class="button_contact">Contact Us</button>
-        </form>
-      </section> -->
+      <section class="bg-primary sm:w-full">
+        <div
+          class="flex flex-col items-center text-center mx-auto py-14 px-4 text-white max-w-lg"
+        >
+          <p class="tracking-widest text-xs mb-3">35,000+ ALREADY JOINED</p>
+          <h2 class="text-2xl md:text-3xl font-medium mb-6 md:tracking-widest">
+            Stay up-to-date with what we're doing
+          </h2>
+
+          <form
+            id="contactForm"
+            class="w-full grid gap-4 md:grid-cols-[2fr_1fr]"
+            novalidate
+          >
+            <div class="relative" id="input-div">
+              <input
+                id="emailInput"
+                type="email"
+                placeholder="Enter your email address"
+                class="w-full bg-white px-5 py-3 rounded text-black placeholder:text-gray-400 placeholder:text-sm focus:outline-none"
+              />
+
+              <span
+                id="errorIcon"
+                class="hidden absolute right-3 top-1/2 -translate-y-1/2"
+              >
+                <img src="./img/icon-error.svg" alt="Error" class="w-5 h-5" />
+              </span>
+
+              <span
+                id="error-text"
+                class="hidden absolute left-0 right-0 top-full text-xs italic bg-secondary text-white px-3 py-2 rounded-b-md text-left"
+              >
+                Whoops, make sure it's an email
+              </span>
+            </div>
+
+            <button
+              id="button-contact"
+              type="submit"
+              class="w-full py-3 px-6 bg-secondary text-white rounded mt-3 font-medium hover:bg-white hover:text-secondary transition-all md:mt-0 lg:mt-0"
+            >
+              Contact Us
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
     <!-- En esta seccion se desarrollara el footer -->
     <!-- <footer class="footer">
