@@ -2,7 +2,7 @@
 
 Example landing page for a bookmark management application. Educational project developed in multiple versions using different frontend technologies.
 
-![Bookmark Landing Page Preview](./img/preview.png)
+![Bookmark Landing Page Preview](https://i.postimg.cc/nrXxjb9C/desktop-preview.jpg)
 
 ---
 
@@ -240,11 +240,11 @@ git checkout release/1.3_tailwind
 
 ### Desktop
 
-![Desktop View](./img/desktop-preview.png)
+![Desktop View](https://i.postimg.cc/YCvwdwXq/desktop-view.png)
 
 ### Mobile
 
-![Mobile View](./img/mobile-preview.png)
+![Mobile View](https://i.postimg.cc/zGgcLDtz/mobile-view.png)
 
 ---
 
