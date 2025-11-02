@@ -42,6 +42,14 @@
     background-color: var(--color-menu-dark);
     opacity: 95%;
   }
+  
+  .logo-white {
+    filter: brightness(0) invert(1);
+  }
+  .hover\:logo-secondary:hover {
+    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%)
+      hue-rotate(346deg) brightness(104%) contrast(97%);
+  }
 
   .hover\:text-secondary:hover {
     color: var(--color-secondary);
@@ -51,13 +59,6 @@
     color: var(--color-primary);
   }
 
-  .hover\:bg-secondary:hover {
-    background-color: var(--color-secondary);
-  }
-
-  .hover\:bg-primary:hover {
-    background-color: var(--color-primary);
-  }
 
   .hover\:bg-white:hover {
     background-color: white;
@@ -75,7 +76,6 @@
 /* ===== ESTILOS GLOBALES ===== */
 * {
   font-family: "Rubik", sans-serif;
-  
 }
 body {
   overflow-x: hidden;

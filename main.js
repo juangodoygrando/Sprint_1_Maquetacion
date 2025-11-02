@@ -73,13 +73,14 @@ form.addEventListener("submit", (e) => {
   if (!emailPattern.test(emailValue)) {
     // Email inválido
     emailInput.classList.remove("rounded");
-    emailInput.classList.add("border-3", "border-secondary", "rounded-t-md");
+    emailInput.classList.add("border-4", "border-secondary", "rounded-t-md");
     errorIcon.classList.remove("hidden");
     errorText.classList.remove("hidden");
     buttonContact.classList.add("mt-6");
   } else {
     // Email válido
-    emailInput.classList.remove("border-3", "border-secondary", "rounded-t-md");
+    emailInput.classList.remove("border-4", "border-secondary", "rounded-t-md");
+    emailInput.classList.add("rounded");
     errorIcon.classList.add("hidden");
     errorText.classList.add("hidden");
     buttonContact.classList.remove("mt-6");
