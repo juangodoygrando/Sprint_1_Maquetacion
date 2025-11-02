@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* ===== VARIABLES ===== */
+@layer base {
+  :root {
+    --color-primary: #5265e1;
+    --color-secondary: #fa5959;
+    --color-menu-dark: #252b46;
+  }
+}
+
+/* ===== CLASES CUSTOM ===== */
+@layer utilities {
+  /* Estados normales */
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+
+  .border-secondary {
+    border-color: var(--color-secondary);
+  }
+  .bg-menu-dark {
+    background-color: var(--color-menu-dark);
+  }
+  .bg-menu-dark-opacity70 {
+    background-color: var(--color-menu-dark);
+    opacity: 95%;
+  }
+  
+  .logo-white {
+    filter: brightness(0) invert(1);
+  }
+  .hover\:logo-secondary:hover {
+    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%)
+      hue-rotate(346deg) brightness(104%) contrast(97%);
+  }
+
+  .hover\:text-secondary:hover {
+    color: var(--color-secondary);
+  }
+
+  .hover\:text-primary:hover {
+    color: var(--color-primary);
+  }
+
+
+  .hover\:bg-white:hover {
+    background-color: white;
+  }
+
+  .hover\:border-secondary:hover {
+    border-color: var(--color-secondary);
+  }
+
+  .hover\:border-primary:hover {
+    border-color: var(--color-primary);
+  }
+}
+
+/* ===== ESTILOS GLOBALES ===== */
+* {
+  font-family: "Rubik", sans-serif;
+}
+body {
+  overflow-x: hidden;
+  /* margin: 0;
+  padding: 0; */
+}
+
+main p {
+  line-height: 1.5;
+}
