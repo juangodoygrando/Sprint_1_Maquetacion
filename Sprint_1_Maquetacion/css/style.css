@@ -47,10 +47,11 @@ main {
   text-decoration: none;
   color: black;
   cursor: pointer;
-  a:hover {
-    cursor: pointer;
-    transform: 2px;
-  }
+}
+.navbar_list li a:hover {
+  cursor: pointer;
+  transform: 2px;
+  color: rgb(249, 89, 91);
 }
 .btn_login {
   border-radius: 5px;
@@ -117,7 +118,7 @@ main {
 .button_chrome {
   background-color: rgb(82, 102, 223);
   color: white;
-  border: none;
+  border: 2px solid;
   padding: 0.7rem 1.2rem;
   border-radius: 5px;
   cursor: pointer;
@@ -127,6 +128,7 @@ main {
   background-color: white;
   color: rgb(82, 102, 223);
   border: 2px solid rgb(82, 102, 223);
+  cursor: pointer;
 }
 
 .button_firefox {
@@ -135,11 +137,12 @@ main {
   padding: 0.7rem 1.2rem;
   border-radius: 5px;
   box-shadow: 0 3px 5px rgba(73, 73, 73, 0.15);
-  border: none;
+  border: 2px solid;
 }
 .button_firefox:hover {
   color: rgb(57, 58, 60);
   border: 2px solid rgb(57, 58, 60);
+  cursor: pointer;
 }
 
 /* FEATURE SECTION CSS */
@@ -240,9 +243,15 @@ main {
 .button_more_info {
   padding: 0.8rem 1.5rem 0.8rem 1.5rem;
   background-color: rgb(83, 104, 223);
-  border: 2px solid rgb(83, 104, 223);
+  border: 2px solid ;
   border-radius: 5px;
   color: white;
+}
+.button_more_info:hover{
+  cursor: pointer;
+  background: white;
+  border: 2px solid rgb(83, 104, 223);
+  color:rgb(83, 104, 223) ;
 }
 
 /* DOWNLOAD EXTENSION CSS */
@@ -265,8 +274,9 @@ main {
   color: rgb(107, 114, 128);
 }
 .extensions_cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 75%;
   margin: 0 auto;
   gap: 2rem;
@@ -275,33 +285,28 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1.3rem;
+  gap: 1.5rem;
+  box-shadow: 3px 8px 23px -2px rgba(0, 0, 0, 0.44);
 }
-.card img {
-  margin-bottom: 1.2rem;
-}
+
 .card h3 {
-  margin-bottom: 1.2rem;
   font-weight: 500;
 }
 .card p {
-  margin-bottom: 1.2rem;
   color: rgb(107, 114, 128);
 }
-.card button {
-  margin-bottom: 1.2rem;
-}
-.card .linea_punteada {
-  margin-top: 1.5rem;
-}
+
 .card button {
   background-color: rgb(83, 104, 223);
   padding: 0.8rem 1.3rem 0.8rem 1.3rem;
+  border: 2px solid;
   border-radius: 5px;
   color: white;
 }
 .card button:hover {
   background-color: white;
-  border: solid rgb(83, 104, 223);
+  border: 2px solid rgb(83, 104, 223);
   color: rgb(83, 104, 223);
   border-radius: 5px;
   cursor: pointer;
@@ -365,10 +370,17 @@ main {
 .faq_button {
   padding: 0.8rem 1.5rem 0.8rem 1.5rem;
   background-color: rgb(83, 104, 223);
-  border: 2px solid rgb(83, 104, 223);
+  border: 2px solid ;
   border-radius: 5px;
   color: white;
 }
+.faq_button:hover{
+  cursor: pointer;
+  background: white;
+  border: 2px solid rgb(83, 104, 223);
+  color:rgb(83, 104, 223) ;
+}
+
 .faq_button_container {
   display: flex;
   justify-content: center;
@@ -685,7 +697,7 @@ main {
   /* DOWNLOAD EXTENSION CSS */
 
   .download_extensions {
-    margin: 2rem 0 1rem 0;
+    margin: 2rem 0 6rem 0;
   }
 
   .download_extensions_text h2 {
@@ -700,8 +712,8 @@ main {
   }
 
   .extensions_cards {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     width: 75%;
     margin: 0 auto;
     gap: 2rem;
