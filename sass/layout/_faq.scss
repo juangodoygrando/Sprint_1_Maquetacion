@@ -54,6 +54,12 @@
   border: 2px solid $color-primary;
   border-radius: $border-radius;
   color: $color-white;
+  &:hover {
+    cursor: pointer;
+    background: white;
+    border: 2px solid rgb(83, 104, 223);
+    color: rgb(83, 104, 223);
+  }
 }
 .faq_button_container {
   display: flex;
