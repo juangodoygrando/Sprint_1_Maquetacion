@@ -431,6 +431,9 @@
   .overflow-visible {
     overflow: visible;
   }
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
   .rounded {
     border-radius: 0.25rem;
   }
@@ -469,10 +472,6 @@
   .border-b-4 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 4px;
-  }
-  .border-b-5 {
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 5px;
   }
   .border-solid {
     --tw-border-style: solid;
@@ -994,7 +993,8 @@
   font-family: "Rubik", sans-serif;
 }
 body {
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 main p {
   line-height: 1.5;
